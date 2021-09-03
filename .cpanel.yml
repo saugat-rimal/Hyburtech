@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/repositories/Hyburtech
+    - /bin/cp -R images $DEPLOYPATH
