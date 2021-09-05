@@ -44,7 +44,6 @@
   border-bottom: 1px solid #f7f7f7;
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-bottom: 50px;
 }
 
 .site-nav h1 {
@@ -448,6 +447,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   background: #ffffff;
   line-height: 1.7;
   color: #878787;
@@ -500,6 +500,25 @@ a:hover {
 
 .site-hero h1 {
   font-size: 30px;
+  font-weight: 700;
+}
+
+.site-banner {
+  background: url(../images/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.site-banner h1 {
+  color: #fff;
+}
+
+.site-banner .breadcrumb-item a {
+  color: #fff;
 }
 
 .scroll-down > a {
@@ -600,7 +619,7 @@ a:hover {
 
 .section-title {
   font-size: 22px;
-  margin-bottom: 30px;
+  margin: 30px 0;
   line-height: 1;
   color: #000000;
 }
@@ -675,7 +694,7 @@ a:hover {
 }
 
 .services-section {
-  padding: 90px 0 70px 0;
+  padding: 50px 0;
 }
 
 .services-section .img-wrap {
