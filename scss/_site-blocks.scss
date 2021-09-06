@@ -86,7 +86,11 @@ a {
 		color: #fff;
 	}
 	& .breadcrumb-item a {
-		color: #fff;
+		color: $primary;
+	}
+
+	& .breadcrumb-item.active {
+		color: #eee !important;
 	}
 }
 

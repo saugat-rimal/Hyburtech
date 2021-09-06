@@ -518,7 +518,11 @@ a:hover {
 }
 
 .site-banner .breadcrumb-item a {
-  color: #fff;
+  color: #385F96;
+}
+
+.site-banner .breadcrumb-item.active {
+  color: #eee !important;
 }
 
 .scroll-down > a {
