@@ -64,7 +64,6 @@ a {
 	position: relative;
 	h1 {
 		font-size: 30px;
-		font-weight: 700;
 	}
 	.img-wrap{
 		// position: relative;
@@ -72,27 +71,6 @@ a {
 	}
 }
 
-
-.site-banner {
-	background: url(../images/banner.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-    position: relative;
-	padding: 5rem 0;
-	text-align: center;
-
-	& h1 {
-		color: #fff;
-	}
-	& .breadcrumb-item a {
-		color: $primary;
-	}
-
-	& .breadcrumb-item.active {
-		color: #eee !important;
-	}
-}
 
 .scroll-down {
 	> a {
@@ -1172,4 +1150,8 @@ input[type="password"] {
 			}
 		}
 	}
+}
+
+div.row.align-items-center {
+    margin-bottom: 50px;
 }
