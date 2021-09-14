@@ -183,33 +183,37 @@
 
 
 
-              <form>
+              <section>
+                
+              <form  action="https://formspree.io/f/mnqlwjqo" method="POST" id="my-forms">
                 <div class="row">
                   <div class="col-6">
                     <div class="form-group">
-                      <label class="text-black" for="fname">First name</label>
-                      <input type="text" class="form-control" id="fname">
+                      <label class="text-black" for="fname">First name:</label>
+                      <input type="text" class="form-control" id="fname" name="First Name">
                     </div>
                   </div>
                   <div class="col-6">
                     <div class="form-group">
                       <label class="text-black" for="lname">Last name</label>
-                      <input type="text" class="form-control" id="lname">
+                      <input type="text" class="form-control" id="lname" name="Last Name">
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="text-black" for="email">Email address</label>
-                  <input type="email" class="form-control" id="email">
+                  <input type="email" class="form-control" id="email" name="Mail Address">
                 </div>
 
                 <div class="form-group">
                   <label class="text-black" for="message">Message</label>
-                  <textarea name="" class="form-control" id="message" cols="30" rows="5"></textarea>
+                  <textarea name="Message" class="form-control" id="message"  cols="30" rows="5"></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary-hover-outline">Send Message</button>
+                <p id="my-form-status"></p>
               </form>
+              
 
             </div>
           </div>
@@ -217,6 +221,7 @@
       </div>
     </div>
   </div>
+              </section>
 
 
 
@@ -311,6 +316,33 @@
         <span class="sr-only">Loading...</span>
       </div>
     </div>
+
+
+
+
+    <!-- mail javascript -->
+<script>
+    var form = document.getElementById("my-forms");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
 
 
 
