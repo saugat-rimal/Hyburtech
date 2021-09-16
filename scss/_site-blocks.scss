@@ -1155,3 +1155,122 @@ input[type="password"] {
 div.row.align-items-center {
     margin-bottom: 50px;
 }
+
+
+.modal-bg {
+	background-image: url(../images/modal-bg.jpg);
+	text-align: center;
+	padding: 0rem 1.5rem 2rem 1.5rem;
+
+	& span {
+		color: #ffffff;
+	}
+
+
+	& h4 {
+		color: #ffffff;
+	}
+
+	& p {
+		color: #ffffff;
+		font-size: 1rem;
+	}
+
+	& .modal-button {
+		display: block;
+		color: #fff;
+		background-color: #f7941eff;
+		font-size: 1.4rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		padding: 0.7rem 0;
+
+		&:hover {
+			text-decoration: underline !important;
+		}
+	}
+
+	& .modal-header {
+		border-bottom: 0px solid transparent !important;
+	}
+}
+
+
+// Site schedule
+.site-schedule {
+
+	&__card {
+		box-shadow: 0 2px 25px -10px rgba(102, 69, 142, 1);
+
+		&--wrapper {
+			background: #f6f6f6;
+			border-radius: 10px;
+			padding: 1rem;
+			& img {
+				width: 70px;
+				height: 70px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				-ms-border-radius: 50%;
+				-o-border-radius: 50%;
+			}
+		}
+
+		&--title {
+			font-size: 13px;
+			color: #404040;
+			font-weight: 700;
+		}
+
+		&--description {
+			font-size: 13px;
+		}
+	}
+}
+
+
+.user-slot {
+	padding: 10px 10px;
+    border: 1px solid #f6f6f6;
+    margin: 5px 0;
+    cursor: pointer;
+    vertical-align: middle;
+    background: #fff;
+    box-shadow: 0 2px 15px -10px rgb(102, 69, 142);
+
+	& strong {
+		font-size: 13px;
+		color: #808080 !important;
+	}
+}
+
+
+.duration {
+	padding-left: 30px;
+    position: relative;
+}
+
+.color {
+	position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 5px;
+    top: 0;
+    border-radius: 10px;
+}
+
+.name {
+	font-size: 13px;
+	padding-left: 30px;
+    position: relative;
+}
+
+
+.form-schedule {
+
+	& label,
+	& input {
+		font-size: 13px !important;
+	}
+}
