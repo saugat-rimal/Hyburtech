@@ -1936,6 +1936,11 @@ div.row.align-items-center {
 .list-check.primary li:before {
   color: #385F96;
 }
+
+
+div.service-icon.color-1.mb-4 {
+  margin-right: 20px;
+}
 /*# sourceMappingURL=style.css.map */
 
 
