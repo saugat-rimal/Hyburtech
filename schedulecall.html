@@ -79,7 +79,7 @@
                   </li>
 
                   <li class="has-children">
-                    <a href="services.html#logo">Grapical Design</a>
+                    <a href="services.html#logo">Graphics Design</a>
                     <ul class="dropdown">
                       <li><a href="services.html#logo">Logo Design</a></li>
                       <li><a href="services.html#banner">Banner Design</a></li>
@@ -93,31 +93,10 @@
               <li><a href="about.html">About</a></li>
               <li><a href="contact.html">Contact us</a></li>
               <li class="cta-button">
-                <a type="button" data-toggle="modal" data-target="#exampleModal">Get Free Call</a>
+                <a href="#">Get Free Call</a>
               </li>
             </ul>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content modal-bg">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <h4>📞 Free for a call for inquiry?</h4>
-                    <p>
-                      Do you feel your business could grow faster with the help of the right technology? It's never too late to embrace change. Especially when it can lead to something amazing. 
-                    </p>
-
-                    <a href="schedulecall.html" class="modal-button">Schedule Your Free Call</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End of Modal -->
             
             <a href="#" class="ml-auto burger site-menu-toggle js-menu-toggle d-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
               <span></span>
@@ -162,209 +141,70 @@
                 <div class="mx-auto mb-4 col-lg-12 col-sm-12">
                     <div class="border-0 card site-schedule__card">
                         <div class="card-body">
-                            <div class="row">
-                                <div class="mx-auto mb-4 col-lg-7 col-sm-12">
-                                    <div class="elegant-calencar d-md-flex">
-                                        <div class="wrap-header d-flex align-items-center">
-                                      <p id="reset">reset</p>
-                                    <div id="header" class="p-0">
-                                    <div class="pre-button d-flex align-items-center justify-content-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </div>
-                                    <div class="head-info">
-                                        <div class="head-day"></div>
-                                        <div class="head-month"></div>
-                                    </div>
-                                    <div class="next-button d-flex align-items-center justify-content-center">
-                                        <i class="fas fa-chevron-right"></i>
-                                    </div>
+                            <form action="POST" id="userScheduleForm" class="form-schedule">
+                              <div class="row">
+                                  <div class="col-lg-6 col-sm-12">
+                                      <div class="form-group">
+                                          <label for="firstname">First Name *</label>
+                                          <input type="TEXT" name="firstname" class="form-control" id="firstname" placeholder="First Name" required="required">
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-6 col-sm-12">
+                                      <div class="form-group">
+                                          <label for="lastname">Last Name *</label>
+                                          <input type="TEXT" name="lastname" class="form-control" id="lastname" placeholder="Last Name" required="required">
+                                      </div>
+                                  </div>
+                              </div>
+        
+                              <div class="row">
+                                  <div class="col-lg-6 col-sm-12">
+                                      <div class="form-group">
+                                          <label for="email">Email *</label>
+                                          <input type="EMAIL" name="email" class="form-control" id="email" placeholder="Email" required="required">
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-6 col-sm-10">
+                                      <div class="form-group">
+                                          <label for="phone">Skype Number *</label>
+                                          <input type="TEXT" name="phone" class="form-control" id="phone" placeholder="Skype Number" required="required">
+                                      </div>
+                                  </div>
+                              </div>
+        
+                              <div class="row">
+                                  <div class="col-lg-6 col-sm-12">
+                                      <div class="form-group">
+                                          <label for="company">Company</label>
+                                          <input type="TEXT" name="company" class="form-control" id="company" placeholder="Company">
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="calendar_field_event_summary">Discussion Topic *</label>
+                                        <input type="TEXT" name="calendar_field_event_summary" class="form-control" id="calendar_field_event_summary" placeholder="Discussion Topic" required="required">
                                     </div>
                                   </div>
-                                  <div class="calendar-wrap">
-                                    <table id="calendar">
-                                    <thead>
-                                        <tr>
-                                            <th>Sun</th>
-                                            <th>Mon</th>
-                                            <th>Tue</th>
-                                            <th>Wed</th>
-                                            <th>Thu</th>
-                                            <th>Fri</th>
-                                            <th>Sat</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                    </tr>
-                                    <tr>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                    </tr>
-                                    <tr>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                    </tr>
-                                    <tr>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                    </tr>
-                                    <tr>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                    </tr>
-                                    <tr>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                    </tr>
-                                    </tbody>
-                                    </table>
+                              </div>
+        
+                              <div class="row">
+                                  <div class="col-lg-6 col-sm-10">
+                                    <div class="form-group">
+                                        <label for="role">Date </label>
+                                        <input type="date" name="role" class="form-control" id="role">
+                                    </div>
                                   </div>
-                                </div>
-                                </div>
-                                <div class="mx-auto mb-4 col-lg-5 col-sm-12">
-                                    <div class="user-slot-container">
-                                        <a href="#" data-toggle="modal" data-target="#exampleModal1">
-                                            <div class="user-slot">
-                                                <div class="duration">
-                                                    <span class="color" style="background: #5484ed;"></span>
-                                                    <strong>30 Mins</strong>
-                                                </div>
-                                                <div class="name text-muted">30 Minutes - Challenges, Tech Analysis, Roadmap</div>
-                                            </div>
-                                        </a>
-                                        <a href="#" data-toggle="modal" data-target="#exampleModal1">
-                                            <div class="user-slot">
-                                                <div class="duration">
-                                                    <span class="color" style="background: #51b749;"></span>
-                                                    <strong>15 Mins</strong>
-                                                </div>
-                                                <div class="name text-muted">15 Minutes - Need Analysis & Tech Adaptation</div>
-                                            </div>
-                                        </a>
-                                        <a href="#" data-toggle="modal" data-target="#exampleModal1">
-                                            <div class="user-slot">
-                                                <div class="duration">
-                                                    <span class="color" style="background: #dc2127;"></span>
-                                                    <strong>5 Mins</strong>
-                                                </div>
-                                                <div class="name text-muted">5 Minutes - Understanding Pain Points</div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg">
-                                            <div class="modal-content">
-                                                <div class="border-0 modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Confirm Meeting</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <form action="POST" id="userScheduleForm" class="form-schedule">
-                                                        <div class="row">
-                                                            <div class="col-lg-6 col-sm-12">
-                                                                <div class="form-group">
-                                                                    <label for="firstname">First Name *</label>
-                                                                    <input type="TEXT" name="firstname" class="form-control" id="firstname" placeholder="First Name" required="required">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6 col-sm-12">
-                                                                <div class="form-group">
-                                                                    <label for="lastname">Last Name *</label>
-                                                                    <input type="TEXT" name="lastname" class="form-control" id="lastname" placeholder="Last Name" required="required">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="row">
-                                                            <div class="col-lg-6 col-sm-12">
-                                                                <div class="form-group">
-                                                                    <label for="email">Email *</label>
-                                                                    <input type="EMAIL" name="email" class="form-control" id="email" placeholder="Email" required="required">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6 col-sm-10">
-                                                                <div class="form-group">
-                                                                    <label for="phone">Phone Number *</label>
-                                                                    <input type="TEXT" name="phone" class="form-control" id="phone" placeholder="Phone Number" required="required">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="row">
-                                                            <div class="col-lg-6 col-sm-12">
-                                                                <div class="form-group">
-                                                                    <label for="company">Company</label>
-                                                                    <input type="TEXT" name="company" class="form-control" id="company" placeholder="Company">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6 col-sm-10">
-                                                                <div class="form-group">
-                                                                    <label for="role">Designation </label>
-                                                                    <input type="TEXT" name="role" class="form-control" id="role" placeholder="Designation">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="row">
-                                                            <div class="col-lg-6 col-sm-12">
-                                                                <div class="form-group">
-                                                                    <label for="calendar_field_event_summary">Discussion Topic *</label>
-                                                                    <input type="TEXT" name="calendar_field_event_summary" class="form-control" id="calendar_field_event_summary" placeholder="Discussion Topic" required="required">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6 col-sm-10">
-                                                                <div class="form-group">
-                                                                    <label for="role">Time </label>
-                                                                    <input type="time" name="role" class="form-control" id="role">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <button class="btn btn-primary">Schedule Appointment</button>
-
-                                                    </form>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                  <div class="col-lg-6 col-sm-10">
+                                      <div class="form-group">
+                                          <label for="role">Time </label>
+                                          <input type="time" name="role" class="form-control" id="role">
+                                      </div>
+                                  </div>
+                              </div>
+        
+                              <button class="my-2 btn btn-primary">Schedule Appointment</button>
+        
+                          </form>
                         </div>
                     </div>
                 </div>
