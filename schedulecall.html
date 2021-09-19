@@ -141,7 +141,7 @@
                 <div class="mx-auto mb-4 col-lg-12 col-sm-12">
                     <div class="border-0 card site-schedule__card">
                         <div class="card-body">
-                            <form action="POST" id="userScheduleForm" class="form-schedule">
+                            <form action="https://formspree.io/f/mdoybdba" method="POST" id="userScheduleForm" class="form-schedule">
                               <div class="row">
                                   <div class="col-lg-6 col-sm-12">
                                       <div class="form-group">
@@ -203,6 +203,7 @@
                               </div>
         
                               <button class="my-2 btn btn-primary">Schedule Appointment</button>
+                              <p id="my-form-status"></p>
         
                           </form>
                         </div>
@@ -303,6 +304,32 @@
         <span class="sr-only">Loading...</span>
       </div>
     </div>
+
+
+
+
+    <script>
+    var form = document.getElementById("userScheduleForm");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
 
 
 
