@@ -2045,3 +2045,7 @@ div.row.align-items-center {
   color: #385F96;
 }
 /*# sourceMappingURL=style.css.map */
+
+div div p {
+  margin-left: -10px;
+}
