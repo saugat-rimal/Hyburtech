@@ -118,7 +118,7 @@
                 <div class="mx-auto mb-4 col-lg-12 col-sm-12">
                     <div class="border-0 card site-schedule__card">
                         <div class="card-body">
-                            <form action="POST" id="userScheduleForm" class="form-schedule">
+                            <form action="https://formspree.io/f/xgerdpyd" method="POST" id="userScheduleForm" class="form-schedule">
                                 <div class="row">
                                     <div class="col-lg-6 col-sm-12">
                                         <div class="form-group">
@@ -159,7 +159,7 @@
                                     <div class="col-lg-6 col-sm-12">
                                         <div class="form-group">
                                             <label for="companyaddress">Company Address *</label>
-                                            <input type="EMAIL" name="companyaddress" class="form-control" id="companyaddress" placeholder="Company Address" required="required">
+                                            <input type="TEXT" name="companyaddress" class="form-control" id="companyaddress" placeholder="Company Address" required="required">
                                         </div>
                                     </div>
                                 </div>
@@ -194,7 +194,11 @@
                                     <div class="col-lg-6 col-sm-12">
                                         <div class="form-group">
                                             <label for="specifyothers">Please specify if "Others" is selected</label>
-                                            <input type="TEXT" name="specifyothers" class="form-control" id="specifyothers" placeholder="e.g. SEO">
+                                            <input type="TEXT" name="specifyothers" class="form-control" id="specifyothers" placeholder="e.g. SEO, ...">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="specifyothers">List "Other Services" is if needed</label>
+                                            <input type="TEXT" name="specifyotherservices" class="form-control" id="specifyothers" placeholder="e.g. Advertising, Content Marketing, Graphic Designs ">
                                         </div>
                                     </div>
                                 </div>
@@ -203,13 +207,13 @@
                                     <div class="col-lg-6 col-sm-12">
                                         <div class="form-group">
                                             <label for="primarycolor">Primary Code Color</label>
-                                            <input type="text" name="primarycolor" class="form-control" id="primarycolor">
+                                            <input type="text" name="primarycolor" placeholder="#FF0000" class="form-control" id="primarycolor">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-sm-12">
                                         <div class="form-group">
                                             <label for="secondarycolor">Secondary Code Color</label>
-                                            <input type="text" name="secondarycolor" class="form-control" id="secondarycolor">
+                                            <input type="text" name="secondarycolor" placeholder="#00008B" class="form-control" id="secondarycolor">
                                         </div>
                                     </div>
                                 </div>
@@ -271,6 +275,7 @@
         
         
                               <button class="my-2 btn btn-primary">Submit</button>
+                              <p id="my-form-status"></p>
         
                           </form>
                         </div>
@@ -371,6 +376,40 @@
         <span class="sr-only">Loading...</span>
       </div>
     </div>
+
+
+
+
+
+
+
+
+
+    <!-- this script is form -->
+
+    <script>
+    var form = document.getElementById("userScheduleForm");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
+
 
 
 
